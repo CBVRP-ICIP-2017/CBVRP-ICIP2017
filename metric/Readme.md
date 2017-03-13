@@ -14,4 +14,4 @@
  **The participants should submit a prediction file with the same format of PATH_PREDICTION file.**
 
  We provide an example of GROUNDTRUTH and PREDICTION file. The example files are only used to demonstrated the format of
- submission and has no relationship with the actual data. 
+ submission and has no relationship with the actual data.
