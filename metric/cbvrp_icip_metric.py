@@ -43,12 +43,12 @@ if __name__=='__main__':
     ground_truth_data = read_file(g_path)
     prediction_data = read_file(p_path)
     total = 0
-    for i in range(len(ground_truth_data)):
-        ground_truth = [int(x) for x in ground_truth_data[i]]
-        show_id = ground_truth[0]
-        prediction = [float(x) for x in prediction_data[show_id - 1]]
+    for i in range(len(prediction_data)):
+        prediction = [float(x) for x in prediction_data[i]]
+        show_id = int(prediction[0])
+        ground_truth = [int(x) for x in ground_truth_data[show_id - 1]]
         metric = ranking_loss(ground_truth[1:], prediction[1:])
         total = total + metric
-    print total / len(ground_truth_data)
+    print total / len(prediction_data)
 
 
